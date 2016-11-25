@@ -3,7 +3,6 @@ var names = document.getElementsByName("artistname");
 
 for(var i = 0; i < imgs.length; i++) {
     var num = i;
-    console.log('prueba');
     imgs[i].addEventListener("mouseover", onHover(names[num]));
     imgs[i].addEventListener("mouseout", onHoverEnd(names[num]));
     names[i].addEventListener("mouseover", onHover(names[num]));
@@ -13,13 +12,11 @@ for(var i = 0; i < imgs.length; i++) {
 function onHover(element) {
     return function() {
         element.setAttribute("style", "opacity: 1;transition: all .3s linear;");
-        console.log('sidaso');
     }
 }
 
 function onHoverEnd(element) {
     return function() {
         element.setAttribute("style", "opacity: 0;transition: all .3s linear;");
-        console.log('sidaso');
     }
 }
