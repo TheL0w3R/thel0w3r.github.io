@@ -1,0 +1,182 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+body {
+    background: url("../img/BG.jpg") #40476d;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: top;
+    font-family: "Open Sans", sans-serif;
+}
+
+.container {
+    width: 90%;
+    max-width: 1080px;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+header .container {
+    margin: 40px auto 0 auto;
+}
+
+header .container nav {
+    background: rgba(0, 0, 0, 0.45);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+header .container nav .pname {
+    padding: 0 20px;
+}
+
+header .container nav .pname p {
+    padding: 0;
+    margin: 0;
+    font-size: 40px;
+    font-weight: 700;
+    color: #b96262;
+    height: 100%;
+}
+
+header .container nav .pname p .pcolor {
+    color: #fff;
+}
+
+header .container nav .menubtns {
+    padding: 0 20px;
+}
+
+header .container nav .menubtns a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 300;
+    font-size: 40px;
+    height: 100%;
+    padding: 17px 20px;
+    margin-bottom: 0;
+    border: none;
+}
+
+header .container nav .selected {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+header .container .logo {
+    margin: 0 auto;
+    margin-top: 60px;
+    width: 120px;
+    height: 120px;
+}
+
+header .container .logo img {
+    vertical-align: top;
+    border-radius: 100%;
+    width: 120px;
+    height: 120px;
+    border: 5px solid #40476d;
+}
+
+.main .container {
+    overflow: visible;
+    margin-top: -60px;
+}
+
+.main .container .fondox {
+    overflow: hidden;
+    background: #40476d;
+    padding: 80px 20px 20px 20px;
+    border-radius: 3px 3px 0 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.main .container .fondox article {
+    background-color: #fff;
+    width: 69%;
+    border-radius: 3px;
+}
+
+.main .container .fondox article .about {
+    padding: 20px;
+    border-radius: 3px;
+    background: #d1d1d1;
+}
+
+.main .container .fondox article .about .about-text h1 {
+    font-weight: 600;
+    font-size: 38px;
+    color: #333;
+    text-align: center;
+}
+
+.main .container .fondox article .about .about-text p {
+    font-weight: 300;
+    font-size: 28px;
+    color: #333;
+    text-align: center;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.main .container .fondox article .artists h3 {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.main .container .fondox article .artists .fotos {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.main .container .fondox article .artists .fotos .thumb {
+    width: 255px;
+    height: 255px;
+    margin: 10px;
+}
+
+.main .container .fondox article .artists .fotos .thumb img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.main .container .fondox aside {
+    width: 29%;
+    background: #e1ce7a;
+    border-radius: 3px;
+}
+
+.main .container .fondox aside h4 {
+    font-weight: 600;
+    font-size: 25.4px;
+    text-align: center;
+}
+
+footer .container {
+    background: #232323;
+    border-radius: 0 0 3px 3px;
+    margin-bottom: 20px;
+    padding: 5px 20px;
+}
+
+footer .container p {
+    color: #fff;
+    font-weight: 300;
+    text-align: center;
+}
