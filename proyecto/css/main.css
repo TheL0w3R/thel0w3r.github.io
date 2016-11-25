@@ -240,9 +240,11 @@ footer .container p {
         font-size: 30px;
     }
     .main .container .fondox article {
+        border-radius: 3px 3px 0 0;
         width: 100%;
     }
     .main .container .fondox aside {
+        border-radius: 0 0 3px 3px;
         width: 100%;
     }
 }
