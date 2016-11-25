@@ -212,3 +212,43 @@ footer .container p {
     font-weight: 300;
     text-align: center;
 }
+
+@media screen and (max-width: 1000px) {
+    header .container {
+        margin: 20px auto 0 auto;
+    }
+    header .container nav {
+        background: none;
+        flex-direction: column;
+    }
+    header .container nav .pname {
+        margin-bottom: 20px;
+    }
+    header .container .logo {
+        margin-top: 80px;
+    }
+    .main .container .fondox article {
+        width: 59%;
+    }
+    .main .container .fondox aside {
+        width: 39%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    header .container nav .menubtns a {
+        font-size: 30px;
+    }
+    .main .container .fondox article {
+        width: 100%;
+    }
+    .main .container .fondox aside {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    header .container nav .menubtns a {
+        font-size: 20px;
+    }
+}
