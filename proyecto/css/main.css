@@ -273,6 +273,7 @@ header .container .logo img {
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: center;
+    padding-bottom: 15px;
 }
 
 .main .container .fondox aside .networks .basic, .main .container .fondox aside .networks .facebook, .main .container .fondox aside .networks .instagram, .main .container .fondox aside .networks .youtube, .main .container .fondox aside .networks .twitter {
