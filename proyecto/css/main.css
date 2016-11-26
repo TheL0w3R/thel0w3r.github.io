@@ -157,7 +157,8 @@ header .container .logo img {
     border-radius: 5px;
 }
 
-.main .container .fondox article .artists .fotos .thumb div {
+.main .container .fondox article .artists .fotos .thumb a {
+    display: block;
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
@@ -166,7 +167,7 @@ header .container .logo img {
     top: 0;
 }
 
-.main .container .fondox article .artists .fotos .thumb div h5 {
+.main .container .fondox article .artists .fotos .thumb a h5 {
     font-weight: 700;
     font-size: 35px;
     position: absolute;
@@ -174,30 +175,132 @@ header .container .logo img {
     bottom: 50%;
     width: 100%;
     color: #fff;
-    cursor: default;
+    cursor: pointer;
 }
 
-.main .container .fondox article .artists .fotos .thumb div p {
+.main .container .fondox article .artists .fotos .thumb a p {
+    width: 100%;
     font-weight: 400;
     font-size: 17px;
     position: absolute;
     text-align: center;
     bottom: 20%;
-    width: 100%;
     color: #fff;
-    cursor: default;
+    cursor: pointer;
 }
 
 .main .container .fondox aside {
+    overflow: hidden;
     width: 29%;
     background: #e1ce7a;
     border-radius: 3px;
+    padding: 0 20px;
 }
 
 .main .container .fondox aside h4 {
     font-weight: 600;
-    font-size: 25.4px;
+    font-size: 30px;
     text-align: center;
+    border-bottom: 2px solid #333;
+    margin: 20px 20px;
+    padding-bottom: 20px;
+}
+
+.main .container .fondox aside .sesion {
+    padding: 0 20px;
+}
+
+.main .container .fondox aside .sesion form input[type="text"],
+.main .container .fondox aside .sesion form input[type="password"] {
+    border: none;
+    background: #333;
+    padding: 10px;
+    margin: 10px 0;
+    width: 100%;
+    border: 1px solid rgba(51, 51, 51, 0.4);
+    border-radius: 5px;
+    color: #fff;
+}
+
+.main .container .fondox aside .sesion form .btndiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.main .container .fondox aside .sesion form .btndiv a {
+    text-decoration: none;
+    color: #40476d;
+    font-weight: 400;
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-top: 5px;
+}
+
+.main .container .fondox aside .sesion form .btndiv input[type="submit"] {
+    border: none;
+    background: #40476d;
+    padding: 10px 10px;
+    text-align: center;
+    color: #fff;
+    font-weight: 300;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.main .container .fondox aside .news ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.main .container .fondox aside .news ul li a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+    padding: 5px 0;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.4);
+    margin-right: 20px;
+    margin-bottom: 10px;
+}
+
+.main .container .fondox aside .networks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.main .container .fondox aside .networks .basic, .main .container .fondox aside .networks .facebook, .main .container .fondox aside .networks .instagram, .main .container .fondox aside .networks .youtube, .main .container .fondox aside .networks .twitter {
+    font-size: 40px;
+    color: #fff;
+    background: #000;
+    padding: 10px 15px;
+    border-radius: 3px;
+    display: inline-block;
+    width: 80px;
+    margin: 10px;
+    text-align: center;
+}
+
+.main .container .fondox aside .networks .facebook {
+    background: #3b5998;
+}
+
+.main .container .fondox aside .networks .instagram {
+    background: #833ab4;
+}
+
+.main .container .fondox aside .networks .youtube {
+    background: #cd201f;
+}
+
+.main .container .fondox aside .networks .twitter {
+    background: #1da1f2;
 }
 
 footer .container {
@@ -232,6 +335,19 @@ footer .container p {
     }
     .main .container .fondox aside {
         width: 39%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .main .container .fondox aside .sesion form .btndiv {
+        flex-direction: column;
+        margin-top: 0;
+    }
+    .main .container .fondox aside .sesion form .btndiv a {
+        margin-bottom: 20px;
+    }
+    .main .container .fondox aside .sesion form .btndiv input[type="submit"] {
+        width: 70%;
     }
 }
 

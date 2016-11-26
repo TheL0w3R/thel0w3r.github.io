@@ -2,11 +2,10 @@ var imgs = document.getElementsByName("artistimg");
 var names = document.getElementsByName("artistname");
 
 for(var i = 0; i < imgs.length; i++) {
-    var num = i;
-    imgs[i].addEventListener("mouseover", onHover(names[num]));
-    imgs[i].addEventListener("mouseout", onHoverEnd(names[num]));
-    names[i].addEventListener("mouseover", onHover(names[num]));
-    names[i].addEventListener("mouseout", onHoverEnd(names[num]));
+    imgs[i].addEventListener("mouseover", onHover(names[i]));
+    imgs[i].addEventListener("mouseout", onHoverEnd(names[i]));
+    names[i].addEventListener("mouseover", onHover(names[i]));
+    names[i].addEventListener("mouseout", onHoverEnd(names[i]));
 }
 
 function onHover(element) {
