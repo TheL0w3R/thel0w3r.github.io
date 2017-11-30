@@ -45,7 +45,8 @@ $(function(){
     });
 
     $('#btn-home').on('click', function(e) {
-        $('#navmenu').hide();
+        if($(window).width() <= 800)
+            $('#navmenu').hide();
         autoscroll = true;
         e.preventDefault();
         $('html, body').animate({
@@ -58,7 +59,8 @@ $(function(){
     });
 
     $('#btn-info').on('click', function(e) {
-        $('#navmenu').hide();
+        if($(window).width() <= 800)
+            $('#navmenu').hide();
         autoscroll = true;
         e.preventDefault();
         $('html, body').animate({
@@ -71,7 +73,8 @@ $(function(){
     });
 
     $('#btn-events').on('click', function(e) {
-        $('#navmenu').hide();
+        if($(window).width() <= 800)
+            $('#navmenu').hide();
         autoscroll = true;
         e.preventDefault();
         $('html, body').animate({
@@ -84,7 +87,8 @@ $(function(){
     });
 
     $('#btn-contact').on('click', function(e) {
-        $('#navmenu').hide();
+        if($(window).width() <= 800)
+            $('#navmenu').hide();
         autoscroll = true;
         e.preventDefault();
         $('html, body').animate({
@@ -97,7 +101,6 @@ $(function(){
     });
 
     $('#btn-readmore').on('click', function(e) {
-        $('#navmenu').hide();
         autoscroll = true;
         e.preventDefault();
         $('html, body').animate({
