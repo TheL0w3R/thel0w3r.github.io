@@ -26,6 +26,16 @@ $(function(){
         }
     });
 
+    $('#hamenu').on('click', function(e) {
+        //$('#navmenu').toggleClass('shown');
+        if($('#navmenu').css('visibility') == 'hidden') {
+            $('#navmenu').css('visibility', 'visible');
+        } else {
+            $('#navmenu').css('visibility', 'hidden');
+            //$('.menuitem.active').removeClass('active');
+        }
+    });
+
     $('#btn-home').on('click', function(e) {
         autoscroll = true;
         e.preventDefault();

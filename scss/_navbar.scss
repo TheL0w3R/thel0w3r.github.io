@@ -23,6 +23,13 @@ nav {
             font-size: 25px;
             @include stdshadow(true);
         }
+        .hamenu {
+            display: none;
+            color: #fff;
+            font-size: 25px;
+            padding: 0 10px;
+            @include stdshadow(true);
+        }
         .navmenu {
             height: 100%;
             display: flex;
@@ -40,11 +47,39 @@ nav {
                 @include stdshadow(true);
                 @include groweffect($maincolor, 0.3s);
                 &:before {
-                    transform:skew(-20deg);
+                    transform: skew(-20deg);
                 }
                 a {
                     text-decoration: none;
                     color: #fff;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    nav {
+        .wrapper {
+            .hamenu {
+                display: inline-block;
+            }
+            .navmenu {
+                visibility: hidden;
+                background: darken($bgcolor, 5);
+                position: absolute;
+                top: 50px;
+                right: 0;
+                flex-direction: column;
+                padding: 0;
+                height: auto;
+                @include stdshadow(false);
+                .menuitem {
+                    display: block;
+                    padding: 10px 20px;
+                    &:before {
+                        transform: skew(0deg);
+                    }
                 }
             }
         }
