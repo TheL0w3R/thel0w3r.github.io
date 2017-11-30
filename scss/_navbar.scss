@@ -73,6 +73,7 @@ nav {
                 flex-direction: column;
                 padding: 0;
                 height: auto;
+                border-bottom-left-radius: 2px;
                 @include stdshadow(false);
                 @include transition(0.3s all ease);
                 .menuitem {
@@ -80,6 +81,12 @@ nav {
                     padding: 10px 50px;
                     &:before {
                         transform: skew(0deg);
+                    }
+                    &:last-child {
+                        border-bottom-left-radius: 2px;
+                        &:before {
+                            border-bottom-left-radius: 2px;
+                        }
                     }
                 }
             }

@@ -140,6 +140,7 @@ nav .wrapper .navmenu .menuitem a {
     flex-direction: column;
     padding: 0;
     height: auto;
+    border-bottom-left-radius: 2px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
     transition: 0.3s all ease;
     -webkit-transition: 0.3s all ease;
@@ -153,6 +154,12 @@ nav .wrapper .navmenu .menuitem a {
   }
   nav .wrapper .navmenu .menuitem:before {
     transform: skew(0deg);
+  }
+  nav .wrapper .navmenu .menuitem:last-child {
+    border-bottom-left-radius: 2px;
+  }
+  nav .wrapper .navmenu .menuitem:last-child:before {
+    border-bottom-left-radius: 2px;
   }
 }
 .head {
