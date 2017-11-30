@@ -132,7 +132,7 @@ nav .wrapper .navmenu .menuitem a {
     display: inline-block;
   }
   nav .wrapper .navmenu {
-    visibility: hidden;
+    display: none;
     background: #262626;
     position: absolute;
     top: 50px;
@@ -141,10 +141,15 @@ nav .wrapper .navmenu .menuitem a {
     padding: 0;
     height: auto;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s all ease;
+    -webkit-transition: 0.3s all ease;
+    -moz-transition: 0.3s all ease;
+    -o-transition: 0.3s all ease;
+    -ms-transition: 0.3s all ease;
   }
   nav .wrapper .navmenu .menuitem {
     display: block;
-    padding: 10px 20px;
+    padding: 10px 50px;
   }
   nav .wrapper .navmenu .menuitem:before {
     transform: skew(0deg);

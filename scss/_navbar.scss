@@ -65,7 +65,7 @@ nav {
                 display: inline-block;
             }
             .navmenu {
-                visibility: hidden;
+                display: none;
                 background: darken($bgcolor, 5);
                 position: absolute;
                 top: 50px;
@@ -74,9 +74,10 @@ nav {
                 padding: 0;
                 height: auto;
                 @include stdshadow(false);
+                @include transition(0.3s all ease);
                 .menuitem {
                     display: block;
-                    padding: 10px 20px;
+                    padding: 10px 50px;
                     &:before {
                         transform: skew(0deg);
                     }
