@@ -1,0 +1,143 @@
+@mixin transition($in) {
+    transition:$in;
+    -webkit-transition:$in;
+    -moz-transition:$in;
+    -o-transition:$in;
+    -ms-transition:$in;
+}
+@mixin transform($in) {
+    transform:$in;
+    -webkit-transform:$in;
+    -moz-transform:$in;
+    -o-transform:$in;
+    -ms-transform:$in;
+}
+@mixin animation($in) {
+    animation:$in;
+    -webkit-animation:$in;
+    -moz-animation:$in;
+    -o-animation:$in;
+    -ms-animation:$in;
+}
+
+@mixin placeholder($color, $size:"") {
+    &::-webkit-input-placeholder {
+        color: $color;
+        @if $size != "" {
+            font-size: $size;
+        }
+    }
+    &:-moz-placeholder {
+        color: $color;
+        @if $size != "" {
+            font-size: $size;
+        }
+    }
+    &::-moz-placeholder {
+        color: $color;
+        @if $size != "" {
+            font-size: $size;
+        }
+    }
+    &:-ms-input-placeholder {
+        color: $color;
+        @if $size != "" {
+            font-size: $size;
+        }
+    }
+}
+
+@mixin groweffect($color, $t) {
+    position: relative;
+    &:before {
+        @include transition($t all ease);
+        position:absolute;
+        top:0;
+        left:50%;
+        right:50%;
+        bottom:0;
+        opacity:0;
+        content:'';
+        background-color: $color;
+        z-index: -1;
+    }
+    &:hover {
+        &:before {
+            @include transition($t all ease);
+            left:0;
+            right:0;
+            opacity:1;
+        }
+    }
+    &:focus {
+        &:before {
+            @include transition($t all ease);
+            left:0;
+            right:0;
+            opacity:1;
+        }
+    }
+    &.active {
+        &:before {
+            @include transition($t all ease);
+            left:0;
+            right:0;
+            opacity:1;
+        }
+    }
+}
+
+@mixin stdshadow($istext) {
+    @if $istext == true {
+        text-shadow: 0 2px 10px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.1);
+    } @else {
+        box-shadow: 0 2px 10px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.1);
+    }
+}
+
+@mixin mainbtn($color, $hovercolor) {
+    text-decoration: none;
+    color: $color;
+    padding: 10px 20px;
+    border-radius: 2px;
+    border: 3px solid $color;
+    font-family: $btnfont;
+    @include groweffect($color, 0.3s);
+    @include stdshadow(false);
+    @include transition(0.3s all ease);
+    &:hover {
+        @include transition(0.3s all ease);
+        text-decoration: none;
+        color: $hovercolor;
+    }
+    &:focus {
+        @include transition(0.3s all ease);
+        text-decoration: none;
+        color: $hovercolor;
+    }
+}
+
+@mixin flex-center() {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@mixin textinput() {
+    border: 3px solid $bgcolor;
+    @include stdshadow(false);
+    @include stdshadow(true);
+    background: $bgcolor;
+    @include placeholder(darken(#f2f2f2, 20), 18px);
+    padding: 8px 10px;
+    border-radius: 2px;
+    color: #fff;
+    @include transition(0.3s all ease);
+    &:focus {
+        border: 3px solid #fff;
+        @include transition(0.3s all ease);
+        background: #fff;
+        color: #000;
+        @include placeholder(lighten(#000, 70), 18px);
+    }
+}

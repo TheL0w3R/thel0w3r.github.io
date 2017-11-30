@@ -1,0 +1,74 @@
+footer {
+    grid-area: foot;
+    background: $bgcolor;
+    @include flex-center();
+    .wrapper {
+        padding: 20px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        z-index: 20;
+        height: 150px;
+        .logo-cont {
+            @include flex-center();
+            a {
+                text-decoration: none;
+                &:hover {
+                    text-decoration: none;
+                }
+                &.logo {
+                    font-family: $btnfont;
+                    font-size: 35px;
+                    color: #fff;
+                    &:hover {
+                        color: #fff;
+                    }
+                }
+            }
+        }
+        .social-cont {
+            border-left: 2px solid rgba(#fff, .5);
+            @include flex-center();
+            .social {
+                padding-left: 40px;
+                .link {
+                    font-size: 30px;
+                    border-radius: 100% !important;
+                    color: #fff;
+                    font-size: 35px;
+                    padding: 10px;
+                    margin-right: 10px;
+                    @include stdshadow(true);
+                    &:before {
+                        border-radius: 100% !important;
+                        background: #fff;
+                    }
+                    &.facebook {
+                        @include groweffect(#3b5998, 0.15s);
+                        @include transition(0.15s all ease);
+                        &:hover {
+                            @include stdshadow(false);
+                            @include transition(0.15s all ease);
+                        }
+                    }
+                    &.twitter {
+                        @include groweffect(#55acee, 0.15s);
+                        @include transition(0.15s all ease);
+                        &:hover {
+                            @include stdshadow(false);
+                            @include transition(0.15s all ease);
+                        }
+                    }
+                    &.youtube {
+                        @include groweffect(#ff0000, 0.15s);
+                        @include transition(0.15s all ease);
+                        &:hover {
+                            @include stdshadow(false);
+                            @include transition(0.15s all ease);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

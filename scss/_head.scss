@@ -1,0 +1,30 @@
+.head {
+    grid-area: head;
+    height: 100vh;
+    padding-top: 50px;
+    @include flex-center();
+    .content {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        z-index: 20;
+        h1 {
+            display: block;
+            color: #f2f2f2;
+            margin-bottom: 30vh;
+            font-size: 45px;
+            text-align: center;
+            @include stdshadow(true);
+        }
+        .btnwrapper {
+            display: block;
+            margin: auto;
+            font-size: 18px;
+            .btn {
+                display: inline-block;
+                @include mainbtn($maincolor, #fff);
+            }
+        }
+    }
+}

@@ -1,0 +1,24 @@
+* {
+    outline: none;
+}
+
+body {
+    background: #f2f2f2;
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+        grid-template-areas: "nav nav nav nav nav"
+                            "head head head head head"
+                            "body body body body body"
+                            "foot foot foot foot foot";
+    }
+    #particles {
+        background: $bgcolor;
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+}
