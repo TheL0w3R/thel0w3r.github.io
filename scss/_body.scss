@@ -10,6 +10,7 @@
     .info {
         @include flex-center();
         margin-bottom: 20px;
+        margin-top: 20px;
         z-index: 20;
         .desc {
             margin: 0 auto;
@@ -27,21 +28,33 @@
                 margin: 0 auto;
                 @include stdshadow(false);
                 border-radius: 2px;
+                margin-bottom: 40px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
                 thead {
-                    background: darken($maincolor, 10);
+                    background: darken($maincolor, 5);
                     color: #fff;
                     font-family: $btnfont;
                     font-size: 25px;
                     //border-top-left-radius: 20px;
+                    tr {
+                        &:first-child {
+                            background: darken($maincolor, 10);
+                            th {
+                                &:last-child {
+                                    border-radius: 0 2px 0 0;
+                                }
+                                &:first-child {
+                                    border-radius: 2px 0 0 0;
+                                }
+                            }
+                        }
+                    }
                     th {
                         text-align: center;
                         padding: 10px 0;
-                        &:last-child {
-                            border-radius: 0 2px 0 0;
-                        }
-                        &:first-child {
-                            border-radius: 2px 0 0 0;
-                        }
+                        
                     }
                 }
                 tbody {

@@ -1,4 +1,12 @@
 @import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:700";
+@keyframes menuAnim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 * {
   outline: none;
 }
@@ -127,41 +135,6 @@ nav .wrapper .navmenu .menuitem a {
   color: #fff;
 }
 
-@media screen and (max-width: 800px) {
-  nav .wrapper .hamenu {
-    display: inline-block;
-  }
-  nav .wrapper .navmenu {
-    display: none;
-    background: #262626;
-    position: absolute;
-    top: 50px;
-    right: 0;
-    flex-direction: column;
-    padding: 0;
-    height: auto;
-    border-bottom-left-radius: 2px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
-    transition: 0.3s all ease;
-    -webkit-transition: 0.3s all ease;
-    -moz-transition: 0.3s all ease;
-    -o-transition: 0.3s all ease;
-    -ms-transition: 0.3s all ease;
-  }
-  nav .wrapper .navmenu .menuitem {
-    display: block;
-    padding: 10px 50px;
-  }
-  nav .wrapper .navmenu .menuitem:before {
-    transform: skew(0deg);
-  }
-  nav .wrapper .navmenu .menuitem:last-child {
-    border-bottom-left-radius: 2px;
-  }
-  nav .wrapper .navmenu .menuitem:last-child:before {
-    border-bottom-left-radius: 2px;
-  }
-}
 .head {
   grid-area: head;
   height: 100vh;
@@ -285,6 +258,7 @@ nav .wrapper .navmenu .menuitem a {
   flex-direction: column;
   justify-content: center;
   margin-bottom: 20px;
+  margin-top: 20px;
   z-index: 20;
 }
 .body .info .desc {
@@ -306,22 +280,29 @@ nav .wrapper .navmenu .menuitem a {
   margin: 0 auto;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
   border-radius: 2px;
+  margin-bottom: 40px;
+}
+.body .events .cont table:last-child {
+  margin-bottom: 0;
 }
 .body .events .cont table thead {
-  background: #2a8136;
+  background: #31943e;
   color: #fff;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 25px;
 }
+.body .events .cont table thead tr:first-child {
+  background: #2a8136;
+}
+.body .events .cont table thead tr:first-child th:last-child {
+  border-radius: 0 2px 0 0;
+}
+.body .events .cont table thead tr:first-child th:first-child {
+  border-radius: 2px 0 0 0;
+}
 .body .events .cont table thead th {
   text-align: center;
   padding: 10px 0;
-}
-.body .events .cont table thead th:last-child {
-  border-radius: 0 2px 0 0;
-}
-.body .events .cont table thead th:first-child {
-  border-radius: 2px 0 0 0;
 }
 .body .events .cont table tbody {
   color: #fff;
@@ -744,6 +725,50 @@ footer .wrapper .social-cont .social .link.youtube:hover {
   -moz-transition: 0.15s all ease;
   -o-transition: 0.15s all ease;
   -ms-transition: 0.15s all ease;
+}
+
+@media screen and (max-width: 800px) {
+  body {
+    width: 90%;
+    margin: 0 auto;
+  }
+  body .contact .cont form {
+    width: 100% !important;
+  }
+
+  nav .wrapper .hamenu {
+    display: inline-block;
+  }
+  nav .wrapper .navmenu {
+    display: none;
+    background: #262626;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    flex-direction: column;
+    padding: 0;
+    height: auto;
+    border-bottom-left-radius: 2px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: 0.3s all ease;
+    -webkit-transition: 0.3s all ease;
+    -moz-transition: 0.3s all ease;
+    -o-transition: 0.3s all ease;
+    -ms-transition: 0.3s all ease;
+  }
+  nav .wrapper .navmenu .menuitem {
+    display: block;
+    padding: 10px 50px;
+  }
+  nav .wrapper .navmenu .menuitem:before {
+    transform: skew(0deg);
+  }
+  nav .wrapper .navmenu .menuitem:last-child {
+    border-bottom-left-radius: 2px;
+  }
+  nav .wrapper .navmenu .menuitem:last-child:before {
+    border-bottom-left-radius: 2px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
