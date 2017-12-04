@@ -1,14 +1,18 @@
 $(function(){
+    //Load particles
     particlesJS.load('particles', 'js/particles/particlesjs-config.json');
 
-    let info = $('#info').offset().top - 50,
+    //Get static offsets for web sections.
+    var info = $('#info').offset().top - 50,
         events = $('#events').offset().top - 50,
         contact = $('#contact').offset().top - 50;
 
-    let autoscroll = false;
+    //Controls scolling behaviour.
+    var autoscroll = false;
 
+    //Scroll section detection.
     $(window).scroll(function() {
-        let scroll = $(window).scrollTop();
+        var scroll = $(window).scrollTop();
         if(!autoscroll) {
             if(scroll > 0 && scroll < info) {
                 $('#btn-home').parent().addClass('active');
@@ -26,6 +30,7 @@ $(function(){
         }
     });
 
+    //Responsiveness helper.
     $(window).resize(function() {
         var w = $(window).width();
         if(w > 800) {
@@ -34,23 +39,20 @@ $(function(){
         }
     });
 
+    //Click event for the hamburger menu button.
     $('#hamenu').on('click', function(e) {
         e.preventDefault();
         if($('#navmenu').is(':visible')) {
-            $("#navmenu").css("opacity", "0").on('transitionend webkitTransitionEnd oTransitionEnd otransitionend', function () {
-                $("#navmenu").css("display", "none");
-            });
+            hideMenu();
         } else {
             $("#navmenu").css("display", "block").unbind("transitionend webkitTransitionEnd oTransitionEnd otransitionend");
             $('#navmenu').animate({opacity: 1}, 30);
         }
-
-        console.log("SIDA");
     });
 
     $('#btn-home').on('click', function(e) {
         if($(window).width() <= 800)
-            $('#navmenu').hide();
+            hideMenu();
         autoscroll = true;
         e.preventDefault();
         $('html, body').animate({
@@ -64,7 +66,7 @@ $(function(){
 
     $('#btn-info').on('click', function(e) {
         if($(window).width() <= 800)
-            $('#navmenu').hide();
+            hideMenu();
         autoscroll = true;
         e.preventDefault();
         $('html, body').animate({
@@ -78,7 +80,7 @@ $(function(){
 
     $('#btn-events').on('click', function(e) {
         if($(window).width() <= 800)
-            $('#navmenu').hide();
+            hideMenu();
         autoscroll = true;
         e.preventDefault();
         $('html, body').animate({
@@ -92,7 +94,7 @@ $(function(){
 
     $('#btn-contact').on('click', function(e) {
         if($(window).width() <= 800)
-            $('#navmenu').hide();
+            hideMenu();
         autoscroll = true;
         e.preventDefault();
         $('html, body').animate({
@@ -117,7 +119,7 @@ $(function(){
     });
 
     function removeActives(el) {
-        let h = $('#btn-home'),
+        var h = $('#btn-home'),
             i = $('#btn-info'),
             e = $('#btn-events'),
             c = $('#btn-contact');
@@ -139,5 +141,11 @@ $(function(){
             i.parent().removeClass('active');
             e.parent().removeClass('active');
         }
+    }
+
+    function hideMenu() {
+        $("#navmenu").css("opacity", "0").on('transitionend webkitTransitionEnd oTransitionEnd otransitionend', function () {
+            $("#navmenu").css("display", "none");
+        });
     }
 });

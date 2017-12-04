@@ -128,3 +128,13 @@
         }
     }
 }
+
+@media screen and (max-width: 400px) {
+    footer {
+        .wrapper {
+            .social-cont {
+                width: 90%;
+            }
+        }
+    }
+}

@@ -823,5 +823,10 @@ footer .wrapper .social-cont .social .link.youtube:hover {
     margin: 0;
   }
 }
+@media screen and (max-width: 400px) {
+  footer .wrapper .social-cont {
+    width: 90%;
+  }
+}
 
 /*# sourceMappingURL=style.css.map */
