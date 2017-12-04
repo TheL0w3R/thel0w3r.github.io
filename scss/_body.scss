@@ -50,6 +50,11 @@
                                 }
                             }
                         }
+                        &:last-child {
+                            th {
+                                font-size: 22px;
+                            }
+                        }
                     }
                     th {
                         text-align: center;

@@ -30,18 +30,22 @@ $(function(){
         var w = $(window).width();
         if(w > 800) {
             $('#navmenu').removeAttr('style');
+            $('#navmenu').unbind("transitionend webkitTransitionEnd oTransitionEnd otransitionend");
         }
     });
 
     $('#hamenu').on('click', function(e) {
         e.preventDefault();
-        //$('#navmenu').toggleClass('shown');
         if($('#navmenu').is(':visible')) {
-            $('#navmenu').hide();
+            $("#navmenu").css("opacity", "0").on('transitionend webkitTransitionEnd oTransitionEnd otransitionend', function () {
+                $("#navmenu").css("display", "none");
+            });
         } else {
-            $('#navmenu').show();
-            //$('.menuitem.active').removeClass('active');
+            $("#navmenu").css("display", "block").unbind("transitionend webkitTransitionEnd oTransitionEnd otransitionend");
+            $('#navmenu').animate({opacity: 1}, 30);
         }
+
+        console.log("SIDA");
     });
 
     $('#btn-home').on('click', function(e) {

@@ -300,6 +300,9 @@ nav .wrapper .navmenu .menuitem a {
 .body .events .cont table thead tr:first-child th:first-child {
   border-radius: 2px 0 0 0;
 }
+.body .events .cont table thead tr:last-child th {
+  font-size: 22px;
+}
 .body .events .cont table thead th {
   text-align: center;
   padding: 10px 0;
@@ -728,12 +731,31 @@ footer .wrapper .social-cont .social .link.youtube:hover {
 }
 
 @media screen and (max-width: 800px) {
-  body {
+  .body {
     width: 90%;
     margin: 0 auto;
   }
-  body .contact .cont form {
+  .body .events .cont table {
+    max-width: 100%;
+  }
+  .body .events .cont table thead {
+    font-size: 22px;
+  }
+  .body .events .cont table thead tr:last-child th {
+    font-size: 18px;
+  }
+  .body .events .cont table tbody {
+    font-size: 15px;
+  }
+  .body .events .cont table tbody tr td:first-child {
+    text-align: center;
+  }
+  .body .contact .cont form {
     width: 100% !important;
+  }
+
+  .head .content h1 {
+    font-size: 35px;
   }
 
   nav .wrapper .hamenu {
@@ -741,6 +763,7 @@ footer .wrapper .social-cont .social .link.youtube:hover {
   }
   nav .wrapper .navmenu {
     display: none;
+    opacity: 0;
     background: #262626;
     position: absolute;
     top: 50px;
@@ -768,6 +791,36 @@ footer .wrapper .social-cont .social .link.youtube:hover {
   }
   nav .wrapper .navmenu .menuitem:last-child:before {
     border-bottom-left-radius: 2px;
+  }
+
+  footer .wrapper .logo-cont a {
+    font-size: 25px !important;
+  }
+  footer .wrapper .social-cont .social .link {
+    font-size: 25px !important;
+  }
+}
+@media screen and (max-width: 600px) {
+  .head .content h1 {
+    font-size: 30px;
+  }
+
+  footer .wrapper .logo-cont a {
+    font-size: 25px !important;
+    text-align: justify;
+  }
+  footer .wrapper .social-cont {
+    width: 70%;
+  }
+  footer .wrapper .social-cont .social {
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  footer .wrapper .social-cont .social .link {
+    font-size: 25px !important;
+    margin: 0;
   }
 }
 
