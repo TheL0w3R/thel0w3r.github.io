@@ -730,6 +730,12 @@ footer .wrapper .social-cont .social .link.youtube:hover {
   -ms-transition: 0.15s all ease;
 }
 
+@media screen and (max-width: 1200px) {
+  .body {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
 @media screen and (max-width: 800px) {
   .body {
     width: 90%;
