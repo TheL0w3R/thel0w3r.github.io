@@ -1,0 +1,21 @@
+body {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+video,audio {
+    display: block;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px 0;
+}
+
+marquee {
+    font-size: 40px;
+    font-family: "Arial";
+}
+
+a {
+    text-align: center;
+}
